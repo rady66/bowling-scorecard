@@ -1,13 +1,17 @@
 package com.rokt.exercise.bowling.scorecard;
 
-import com.rokt.exercise.bowling.scorecard.impl.ScoreCardImpl;
-
+/**
+ * Factory class for Ten-pin Bowling Score Card.
+ */
 public class ScoreCardFactory {
 
-    private ScoreCardFactory() {
-    }
+    private ScoreCardFactory() {}
 
-    public static IScoreCard createTenPinScoreCard() {
-        return new ScoreCardImpl(10);
+    /**
+     * Creates TenPin Score Card object.
+     * @return TenPin Score Card object.
+     */
+    public static ScoreCard createTenPinScoreCard() {
+        return new ScoreCardExt(10);
     }
 }
