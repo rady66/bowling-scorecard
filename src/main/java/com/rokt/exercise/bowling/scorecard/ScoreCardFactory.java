@@ -5,7 +5,11 @@ package com.rokt.exercise.bowling.scorecard;
  */
 public class ScoreCardFactory {
 
+    // Constructor ---------------------------------------------------------------------------------------
+
     private ScoreCardFactory() {}
+
+    // Public methods ------------------------------------------------------------------------------------
 
     /**
      * Creates TenPin Score Card object.

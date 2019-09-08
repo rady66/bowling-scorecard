@@ -18,6 +18,8 @@ public class Frame {
 
     int score;
 
+    // Constructor --------------------------------------------------------------------------------------
+
     Frame(int ballOneScore,
           int ballTwoScore,
           int ballThreeScore,

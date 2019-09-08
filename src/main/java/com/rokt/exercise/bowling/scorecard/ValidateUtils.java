@@ -3,12 +3,11 @@ package com.rokt.exercise.bowling.scorecard;
 /**
  * Validation utility.
  */
-final class Validate {
+final class ValidateUtils {
 
-    private Validate() {}
+    private ValidateUtils() {}
 
-    static void positiveNumber(int number,
-                               String argument) {
+    static void positiveNumber(int number, String argument) {
         if (number < 1) {
             throw new IllegalArgumentException(argument + " must be positive number: " + number);
         }

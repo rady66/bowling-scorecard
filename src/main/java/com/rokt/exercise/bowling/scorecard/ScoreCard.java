@@ -4,9 +4,9 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-import static com.rokt.exercise.bowling.scorecard.Validate.positiveNumber;
-import static com.rokt.exercise.bowling.scorecard.Validate.validFrameArguments;
-import static com.rokt.exercise.bowling.scorecard.Validate.validLastFrameArguments;
+import static com.rokt.exercise.bowling.scorecard.ValidateUtils.positiveNumber;
+import static com.rokt.exercise.bowling.scorecard.ValidateUtils.validFrameArguments;
+import static com.rokt.exercise.bowling.scorecard.ValidateUtils.validLastFrameArguments;
 
 /**
  * Score Card object representation in Ten-pin Bowling Game.
@@ -27,12 +27,16 @@ public class ScoreCard {
     private final int pinSize;
     private final LinkedList<Frame> internalFrameList = new LinkedList<>();
 
+    // Constructor --------------------------------------------------------------------------------------
+
     ScoreCard(int pinSize) {
         positiveNumber(pinSize, "pinSize");
 
         this.pinSize = pinSize;
         this.frames = Collections.unmodifiableList(internalFrameList);
     }
+
+    // Public methods -----------------------------------------------------------------------------------
 
     /**
      * Score a frame on the card (1-9 frame/roll)
@@ -66,7 +70,7 @@ public class ScoreCard {
         addFrame(ballOneScore, ballTwoScore, ballThreeScore);
     }
 
-    // Private methods -----------------------------------------------------------------------
+    // Private methods -------------------------------------------------------------------------------
 
     private int calculateTotalScore() {
         return internalFrameList.stream()
