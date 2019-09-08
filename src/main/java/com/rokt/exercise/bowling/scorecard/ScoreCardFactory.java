@@ -12,6 +12,6 @@ public class ScoreCardFactory {
      * @return TenPin Score Card object.
      */
     public static ScoreCard createTenPinScoreCard() {
-        return new ScoreCardExt(10);
+        return new ScoreCard(10);
     }
 }

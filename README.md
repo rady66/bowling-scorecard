@@ -13,8 +13,8 @@ ScoreCard card = ScoreCardFactory.createTenPinScoreCard();
 
 ## How to score a frame (1-9)?
 ```
-int ballOneScore = 9; 
-int ballTwoScore = 1; 
+int ballOneScore = 7; 
+int ballTwoScore = 2; 
 scoreCard.score(ballOneScore, ballTwoScore);
 ```
 
